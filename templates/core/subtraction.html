@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if result %}
+
+<div class="alert alert-{{ color }} alert-dismissible fade show text-center" data-timeout="6000" role="alert">
+  <strong>{{ result }}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endif %}
+
+<div class="container my-4">
+    <h1 class="mb-3 text-center">What is the difference of these two numbers?</h1>
+    <h1 class="text-center"><img src="../../static/cards/{{ num1 }}.png" alt="" /> - <img src="../../static/cards/{{ num2 }}.png" alt="" /></h1>
+</div>
+
+<form action="{% url 'subtraction' %}" method="POST" class="mt-4">
+  {% csrf_token %}
+  <div class="mb-3">
+    <input type="text" name="answer" class="form-control" placeholder="Type your answer here">
+    <input type="hidden" name="org_num1" value="{{ num1 }}">
+    <input type="hidden" name="org_num2" value="{{ num2 }}">
+  </div>
+  <button type="submit" class="btn btn-secondary w-100">Submit</button>
+</form>
+
+{% endblock content %}
