@@ -1,7 +1,56 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block content %}
 
-<h1>Hello Flash Card World</h1>
+<div class="text-center mt-5">
+    <h1>Hello, welcome to a Django math flash card application. Have fun!</h1>
+    <p class="lead">Test your math knowledge with addition, subtraction, multiplication, or division.</p>
+</div>
+<div class="row row-cols-1 row-cols-md-2 g-4 mb-3">
+  <div class="col">
+    <a href="{% url 'addition' %}" class="text-decoration-none">
+        <div class="card">
+          <img src="{% static 'assets/addition.jpg' %}" class="card-img-top" alt="Addition">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Addition</h5>
+            <p class="card-text text-dark">Test your skill at adding two numbers together.</p>
+          </div>
+        </div>
+    </a>
+  </div>
+  <div class="col">
+    <a href="{% url 'subtraction' %}" class="text-decoration-none">
+        <div class="card">
+          <img src="{% static 'assets/subtract.jpg' %}" class="card-img-top" alt="Subtraction">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Subtraction</h5>
+            <p class="card-text text-dark">Remember how to subtract two numbers? Find out here. Remember there can be negative results.</p>
+          </div>
+        </div>
+    </a>
+  </div>
+  <div class="col">
+    <a href="{% url 'multiplication' %}" class="text-decoration-none">
+        <div class="card">
+          <img src="{% static 'assets/multiply.jpg' %}" class="card-img-top" alt="Multiplication">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Multiplication</h5>
+            <p class="card-text text-dark">Do you remember your times table? Lets find out how to multiplying two numbers.</p>
+          </div>
+        </div>
+    </a>
+  </div>
+  <div class="col">
+    <a href="{% url 'division' %}" class="text-decoration-none">
+        <div class="card">
+          <img src="{% static 'assets/division.jpg' %}" class="card-img-top" alt="Division">
+          <div class="card-body">
+            <h5 class="card-title text-dark">Division</h5>
+            <p class="card-text text-dark">Division can be tricky, but don't give up. Remember to enter a decimal value for the remainder.</p>
+          </div>
+        </div>
+    </a>
+  </div>
+</div>
 
 {% endblock content %}

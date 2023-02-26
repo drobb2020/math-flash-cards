@@ -10,4 +10,6 @@
 
 body {
   font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  height: 150vh;
 }
