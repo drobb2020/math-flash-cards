@@ -1,0 +1,17 @@
+asgiref==3.6.0
+black==23.1.0
+click==8.1.3
+Django==4.1.7
+django-extensions==3.2.1
+flake8==6.0.0
+flake8-django==1.1.1
+mccabe==0.7.0
+mypy-extensions==1.0.0
+packaging==23.0
+pathspec==0.11.0
+platformdirs==3.0.0
+psycopg2==2.9.5
+pycodestyle==2.10.0
+pyflakes==3.0.1
+python-decouple==3.7
+sqlparse==0.4.3
